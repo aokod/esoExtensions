@@ -1,7 +1,7 @@
 <?php
 // English (esoteric).php
 // English esoteric language pack.
-// Created by Adolf Hitler.
+// Created by GigaHacer
 // The very best language pack ever made for ezo.
 // If you don't use this language pack, Benjamin will haunt you for the rest of your life.
 // The secrets of the Zerners will be published in part, in the comments of this file.
