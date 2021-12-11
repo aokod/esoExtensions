@@ -91,7 +91,7 @@ h3 {font-size:120%; font-weight:bold}
 .warning a, .warning a:hover {color:#fff; text-decoration:underline}
 
 /* Stars */
-.star1, .star0 {cursor:default; display:block; height:30px; width:30px; background:url("star.gif") no-repeat}
+.star1, .star0 {font-size:0; cursor:default; display:block; height:30px; width:30px; background:url("star.gif") no-repeat}
 a.star1, a.star0 {cursor:pointer}
 .star0 {background-position:-60px 0}
 a.star0:hover {background-position:-30px 0}
