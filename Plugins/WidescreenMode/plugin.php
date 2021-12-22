@@ -15,7 +15,10 @@ function init()
 	parent::init();
 
     global $config;
+
+    // Check if the database has the column the plugin requires.
 	if (!$this->eso->db->numRows("SHOW COLUMNS FROM {$config["tablePrefix"]}members LIKE 'widescreen'")) {
+        // If it doesn't, create it.
 		$this->eso->db->query("ALTER TABLE {$config["tablePrefix"]}members ADD COLUMN widescreen tinyint(1) NOT NULL default '0'");
 	}
 
@@ -31,11 +34,13 @@ function init()
 
 }
 
+// This is the part where we actually give the user the CSS if they've checked the setting.
 function setWidescreen()
 {
     if (!empty($this->eso->user["widescreen"])) $this->eso->addCSS("plugins/WidescreenMode/widescreen.css");
 }
 
+// This is the part where we add the setting to the settings screen. Fun!
 function addWidescreenSettings(&$settings)
 {
 	global $language;
@@ -49,4 +54,5 @@ function addWidescreenSettings(&$settings)
 }
 
 }
+
 ?>
